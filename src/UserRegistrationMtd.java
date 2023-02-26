@@ -10,13 +10,24 @@ public class UserRegistrationMtd {
         String nameInput  = sc.next();
 
         if(Pattern.matches("^[A-Z][a-z]{2,}$",nameInput)){
-//            System.out.println(x +" : " +nameInput);
             return nameInput;
         }else{
             System.out.println("Please Enter Valid Name");
             Name(x);
             return null;
+        }
+    }
+    public String email(){
+        System.out.println("\nEnter Email Id : ");
+        Scanner sc =  new Scanner(System.in);
+        String emailInput  = sc.nextLine();
 
+        if(Pattern.matches("^[a-zA-Z0-9_.-]+@[a-zA-Z]+.[a-zA-Z.]+$",emailInput)){
+            return emailInput;
+        }else{
+            System.out.println("Please Enter Valid Email ID");
+            email();
+            return null;
         }
     }
 }

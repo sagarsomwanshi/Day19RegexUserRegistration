@@ -4,5 +4,6 @@ public class Main {
         UserRegistrationMtd obj = new UserRegistrationMtd();
         String firstName = obj.Name("First Name");
         String lastName = obj.Name("Last Name");
+        String email = obj.email();
     }
 }

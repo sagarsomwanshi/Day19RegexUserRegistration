@@ -5,5 +5,6 @@ public class Main {
         String firstName = obj.Name("First Name");
         String lastName = obj.Name("Last Name");
         String email = obj.email();
+        String phone = obj.phone();
     }
 }

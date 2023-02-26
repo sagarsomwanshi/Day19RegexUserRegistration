@@ -30,4 +30,17 @@ public class UserRegistrationMtd {
             return null;
         }
     }
+    public String phone(){
+        System.out.println("\nEnter Phone Number (Starts with +country code)");
+        Scanner sc =  new Scanner(System.in);
+        String phone  = sc.nextLine();
+
+        if(Pattern.matches("^\\+[0-9]{2}[0-9]{10}$",phone)){
+            return phone;
+        }else{
+            System.out.println("Please Enter Valid Phone Number");
+            phone();
+            return null;
+        }
+    }
 }

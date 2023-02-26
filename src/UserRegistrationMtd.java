@@ -22,7 +22,7 @@ public class UserRegistrationMtd {
         Scanner sc =  new Scanner(System.in);
         String emailInput  = sc.nextLine();
 
-        if(Pattern.matches("^[a-zA-Z0-9_.-]+@[a-zA-Z]+.[a-zA-Z.]+$",emailInput)){
+        if(Pattern.matches("^[\\w_.-]+@[a-zA-Z]+.[a-zA-Z.]+$",emailInput)){
             return emailInput;
         }else{
             System.out.println("Please Enter Valid Email ID");
@@ -40,6 +40,19 @@ public class UserRegistrationMtd {
         }else{
             System.out.println("Please Enter Valid Phone Number");
             phone();
+            return null;
+        }
+    }
+    public String password(){
+        System.out.println("\nEnter Password (should be minimum 8 characters, should contain at least 1 capital letter, number & special character )");
+        Scanner sc =  new Scanner(System.in);
+        String password  = sc.nextLine();
+
+        if(Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*+=_-])(?=\\S+$).{8,}$",password)){
+            return password;
+        }else{
+            System.out.println("Please Enter Valid Password");
+            password();
             return null;
         }
     }
